@@ -10,7 +10,7 @@ class FourSided {
 
 class Square extends FourSided{
     constructor(size) {
-        super("square");
+        super("square");// value of name^ how does this fix the .area problem
         this.height = size;
         this.width = size;
     }

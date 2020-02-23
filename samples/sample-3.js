@@ -7,7 +7,7 @@ class Student {
         this.excitement = this.excitement  + 5;
     }
 
-    writeCode = () => { learn(); }
+    writeCode = () => { this.learn(); } //this.learn ('this' refers to the parent object)
 }
 
 let bob = new Student();
