@@ -10,7 +10,9 @@ class Dog {
     food = () => {
         this.hunger = this.hunger - 10;
     }
- }
+}
 
- let fido = new Dog();
- fido.run();
+let fido = new Dog();
+fido.run();
+
+// no eat function// 

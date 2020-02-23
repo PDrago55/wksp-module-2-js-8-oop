@@ -212,13 +212,14 @@ let terrier = new Dog('yip!yip!');
 
 ```js
 class Car {
-    constructor() {
-        this.mileage = 0;
+    constructor(milage) {
+        this.status= mileage > 0 ? 'used' : 'new';
+        this.mileage = mileage || 0;
     }
-    drive = () => { this.mileage = this.mileage + 10 }
+    drive = (amount) => { this.mileage = this.mileage + 10 }
 }
-let myCar = new Car();
-myCar.drive(); 
+let myCar = new Car(10000);
+myCar.drive(100); 
 ```
 
 ---
@@ -229,8 +230,18 @@ myCar.drive();
 // 1. Given this class, how would we represent its hunger level?
 // 2. How could we represent varying hunger levels based on activity?
 // 3. How about when it eats?
-class Animal {
 
+class Animal {
+    constructor(name){
+    this.name = name;
+    this.hungerLevel = 0
+    }
+    activity = () => {
+        this.hungerLevel += 20;
+        }
+    eat = () => {
+        this.hungerlevel -= 30;
+    }
 }
 
 ```
